@@ -18,13 +18,23 @@
       </Imports>
       <Declarations>
         <Literal>
-          <ID>name</ID>
-          <ToolTip>Replace with the name of the test method</ToolTip>
-          <Default>MyTestMethod</Default>
+          <ID>methodName</ID>
+          <ToolTip>Replace with the name of the method being tested</ToolTip>
+          <Default>MethodUnderTest</Default>
+        </Literal>
+        <Literal>
+          <ID>scenario</ID>
+          <ToolTip>Replace with description of the scenario under it's being tested</ToolTip>
+          <Default>Scenario</Default>
+        </Literal>
+        <Literal>
+          <ID>expectedBehavior</ID>
+          <ToolTip>Replace with description of the expected behavior when the scenario is invoked</ToolTip>
+          <Default>ExpectedBehavior</Default>
         </Literal>
       </Declarations>
       <Code Language="csharp"><![CDATA[[Fact]
-      public void $name$()
+      public void $methodName$_$scenario$_$expectedBehavior$()
       {
           // Arrange
 		      $end$
